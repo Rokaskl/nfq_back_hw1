@@ -1,8 +1,8 @@
 <?php
 
-namespace Nfq\Akademija\NotTyped;
-
-function calculateHomeWorkSum(...$numbers) : int
+namespace Nfq\Akademija;
+class NotTyped {
+static function calculateHomeWorkSum(...$numbers) : int
 {
         $sum = 0;
         foreach ($numbers as $n) {
@@ -11,4 +11,4 @@ function calculateHomeWorkSum(...$numbers) : int
         return $sum;
 
 }
-?>
+}

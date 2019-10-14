@@ -6,4 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Nfq\\Akademija\\NotTyped' => $baseDir . '/src/1.php',
+    'Nfq\\Akademija\\Soft' => $baseDir . '/src/2.php',
+    'Nfq\\Akademija\\Strict' => $baseDir . '/src/3.php',
 );

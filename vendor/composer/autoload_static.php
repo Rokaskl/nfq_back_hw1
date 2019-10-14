@@ -20,11 +20,18 @@ class ComposerStaticInit16ce995a72e7e4ef657669acf3de5f31
         ),
     );
 
+    public static $classMap = array (
+        'Nfq\\Akademija\\NotTyped' => __DIR__ . '/../..' . '/src/1.php',
+        'Nfq\\Akademija\\Soft' => __DIR__ . '/../..' . '/src/2.php',
+        'Nfq\\Akademija\\Strict' => __DIR__ . '/../..' . '/src/3.php',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit16ce995a72e7e4ef657669acf3de5f31::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit16ce995a72e7e4ef657669acf3de5f31::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit16ce995a72e7e4ef657669acf3de5f31::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -1,6 +1,7 @@
 <?php
-namespace Nfq\Akademija\Soft;
-function calculateHomeWorkSum(int ...$numbers) : int
+namespace Nfq\Akademija;
+class Soft{
+static function calculateHomeWorkSum(int ...$numbers) : int
 {
         $sum = 0;
         foreach ($numbers as $n) {
@@ -8,4 +9,4 @@ function calculateHomeWorkSum(int ...$numbers) : int
         }
         return $sum;
 }
-?>
+}

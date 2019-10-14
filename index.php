@@ -1,9 +1,10 @@
 <?php
-try {
+require "vendor/autoload.php";
 
-spl_autoload_register(function ($class_name) {
-    include $class_name . '.php';
-});
+use Nfq\Akademija\NotTyped;
+use Nfq\Akademija\Soft;
+use Nfq\Akademija\Strict;
+try {
  //   Not working :(    //
 
     function calculateHomeWorkSum(...$numbers) 
@@ -14,23 +15,15 @@ spl_autoload_register(function ($class_name) {
             }
             return $sum;
     }
-include_once("./1.php");
-include_once("./2.php");
-include_once("./3.php");
 
 echo "calculateHomeWorkSum : ".calculateHomeWorkSum(3,2.2,'1'); 
 echo "\n";
-echo "\Nfq\Akademija\NotTyped\calculateHomeWorkSum : ".\Nfq\Akademija\NotTyped\calculateHomeWorkSum(3,2.2,'1'); 
+echo "\Nfq\Akademija\NotTyped\calculateHomeWorkSum : ".NotTyped::calculateHomeWorkSum(3,2.2,'1'); 
 echo "\n";
-echo "\Nfq\Akademija\Soft\calculateHomeWorkSum : ".\Nfq\Akademija\Soft\calculateHomeWorkSum(3,2.2,'1'); 
+echo "\Nfq\Akademija\Soft\calculateHomeWorkSum : ".Soft::calculateHomeWorkSum(3,2.2,'1'); 
 echo "\n";
-echo "\Nfq\Akademija\Strict\calculateHomeWorkSum : ". \Nfq\Akademija\Strict\calculateHomeWorkSum(3,2.2,'1'); 
+echo "\Nfq\Akademija\Strict\calculateHomeWorkSum : ".Strict::calculateHomeWorkSum(3,2.2,'1'); 
  }
  catch(Exception $e) {
     echo 'Message: ' .$e->getMessage();
 }
-
-
-
-
-?>
