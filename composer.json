@@ -1,0 +1,12 @@
+{
+    "name": "rokas/nfq_back_hw1",
+    "authors": [
+        {
+            "name": "Rokaskl",
+            "email": "rokasklkl@gmail.com"
+        }
+    ],
+    "require": {
+        "jakub-onderka/php-console-color": "^0.2.0"
+    }
+}
