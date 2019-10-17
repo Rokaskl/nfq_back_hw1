@@ -2,6 +2,7 @@
 declare(strict_types = 1);
 
 namespace Nfq\Akademija;
+
 class Strict{
 static function calculateHomeWorkSum(int ...$numbers) : int
 {
